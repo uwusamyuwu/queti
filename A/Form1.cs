@@ -27,8 +27,13 @@ namespace A
         private void Form1_Load(object sender, EventArgs e)
         {
             Familia familia1 = new Familia();
-            familia1.nombre = "a";
+            
             dgvFamilia.DataSource = familia1.llenarFamilia();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

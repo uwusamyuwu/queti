@@ -31,6 +31,8 @@ namespace A
         {
             this.btCompletar = new System.Windows.Forms.Button();
             this.dgvFamilia = new System.Windows.Forms.DataGridView();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamilia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +55,32 @@ namespace A
             this.dgvFamilia.Size = new System.Drawing.Size(511, 409);
             this.dgvFamilia.TabIndex = 1;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(664, 439);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(664, 115);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 533);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvFamilia);
             this.Controls.Add(this.btCompletar);
             this.Name = "Form1";
@@ -72,6 +95,8 @@ namespace A
 
         private System.Windows.Forms.Button btCompletar;
         private System.Windows.Forms.DataGridView dgvFamilia;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 
