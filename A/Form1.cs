@@ -14,6 +14,9 @@ namespace A
 {
     public partial class Form1 : Form
     {
+
+        Familia familia1 = new Familia();
+
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace A
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Familia familia1 = new Familia();
+
             
             dgvFamilia.DataSource = familia1.llenarFamilia();
         }
@@ -34,6 +37,24 @@ namespace A
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string idFamilia = dgvFamilia.SelectedCells[0].Value.ToString();
+            familia1.eliminarFamilia(idFamilia);
+
+            dgvFamilia.DataSource = familia1.llenarFamilia();
         }
     }
 }

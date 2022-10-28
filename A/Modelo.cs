@@ -17,7 +17,7 @@ namespace Modelo
 
         public DataTable llenarFamilia()
         {
-            MySqlConnection conexion = new MySqlConnection("server=10.120.3.200;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlConnection conexion = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
             MySqlCommand instruccion = new MySqlCommand();
             instruccion.Connection = conexion;
 
@@ -33,6 +33,20 @@ namespace Modelo
 
             return Tabla;
         }
+
+
+        public void eliminarFamilia(string pId)
+        {
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+            instruccion.CommandText = "delete from familia where idfamilia = '" + pId + "'";
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
+            //MessageBox.Show(pId);
+        }
+
     }
 
 }
