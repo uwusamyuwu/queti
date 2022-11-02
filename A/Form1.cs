@@ -56,5 +56,10 @@ namespace A
 
             dgvFamilia.DataSource = familia1.llenarFamilia();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
