@@ -12,12 +12,12 @@ using Modelo;
 
 namespace A
 {
-    public partial class Form1 : Form
+    public partial class AdministradordeFamilia : Form
     {
 
         Familia familia1 = new Familia();
 
-        public Form1()
+        public AdministradordeFamilia()
         {
             InitializeComponent();
         }
@@ -41,7 +41,8 @@ namespace A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            AltaFamilia altaFamilia = new AltaFamilia();
+            altaFamilia.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

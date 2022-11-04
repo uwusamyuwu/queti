@@ -163,10 +163,11 @@ C:\Users\ET12Compu\Documents\queti\A\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ET12Compu\Documents\queti\A\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.csproj.AssemblyReference.cache
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.csproj.SuggestedBindingRedirects.cache
-C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.Form1.resources
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.Properties.Resources.resources
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.csproj.GenerateResource.cache
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.csproj.CoreCompileInputs.cache
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.csproj.CopyComplete
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.exe
 C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.pdb
+C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.AltaFamilia.resources
+C:\Users\ET12Compu\Documents\queti\A\obj\Debug\A.AdministradordeFamilia.resources

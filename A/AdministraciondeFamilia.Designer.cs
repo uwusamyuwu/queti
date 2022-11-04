@@ -1,7 +1,7 @@
 ﻿
 namespace A
 {
-    partial class Form1
+    partial class AdministradordeFamilia
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -98,7 +98,7 @@ namespace A
             this.label1.Text = "Sistema de Gestion de Familia";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form1
+            // AdministradordeFamilia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,8 +109,8 @@ namespace A
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvFamilia);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AdministradordeFamilia";
+            this.Text = "AdministradordeFamilia";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamilia)).EndInit();
             this.ResumeLayout(false);
