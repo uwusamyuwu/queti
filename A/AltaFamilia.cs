@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace A
 {
     public partial class AltaFamilia : Form
     {
+        Familia flia = new Familia();
         public AltaFamilia()
         {
             InitializeComponent();
@@ -29,7 +31,12 @@ namespace A
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //MessageBox.Show(TxtNombre.ToString());
+            flia.nombre = TxtNombre.ToString();
+            flia.apellido = TxtApellido.ToString();
+            flia.parentesco = TxtParentesco.ToString();
+            flia.ocupacion = TxtOcupacion.ToString();
+            flia.agregarFamilia(flia);
         }
 
         private void label1_Click(object sender, EventArgs e)

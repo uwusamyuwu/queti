@@ -5,15 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Modelo
 {
     class Familia
     {
-        private int idFamilia { get; set; }
-        private string nombre { get; set; }
-        private string parentesco { get; set; }
-        private string ocupacion { get; set; }
+        public int idFamilia { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string parentesco { get; set; }
+        public string ocupacion { get; set; }
 
         public DataTable llenarFamilia()
         {
@@ -46,7 +48,13 @@ namespace Modelo
             cnx.Close();
             //MessageBox.Show(pId);
         }
-
+        public void agregarFamilia(Familia pFlia)
+        {
+            MessageBox.Show(pFlia.nombre);
+                /*
+                hacer  todo para insertar en la bd
+                */
+        }
     }
 
 }
