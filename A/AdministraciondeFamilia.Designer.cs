@@ -44,12 +44,12 @@ namespace A
             this.dgvFamilia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFamilia.Location = new System.Drawing.Point(41, 71);
             this.dgvFamilia.Name = "dgvFamilia";
-            this.dgvFamilia.Size = new System.Drawing.Size(553, 380);
+            this.dgvFamilia.Size = new System.Drawing.Size(560, 380);
             this.dgvFamilia.TabIndex = 1;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(610, 428);
+            this.btnCerrar.Location = new System.Drawing.Point(621, 428);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 2;
@@ -59,7 +59,7 @@ namespace A
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(610, 71);
+            this.btnAgregar.Location = new System.Drawing.Point(621, 71);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace A
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(610, 173);
+            this.btnModificar.Location = new System.Drawing.Point(621, 173);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 4;
@@ -79,7 +79,7 @@ namespace A
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(610, 302);
+            this.btnEliminar.Location = new System.Drawing.Point(621, 301);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 5;
@@ -102,7 +102,7 @@ namespace A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 533);
+            this.ClientSize = new System.Drawing.Size(708, 462);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);

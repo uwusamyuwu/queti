@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using Org.BouncyCastle.Utilities.Collections;
 
 namespace Modelo
 {
@@ -50,10 +52,24 @@ namespace Modelo
         }
         public void agregarFamilia(Familia pFlia)
         {
-            MessageBox.Show(pFlia.nombre);
-                /*
-                hacer  todo para insertar en la bd
-                */
+            string textoRecibido = pFlia.nombre + " " + pFlia.apellido + " " + pFlia.ocupacion + " " + pFlia.parentesco;
+            //MessageBox.Show(textoRecibido);
+
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+
+            instruccion.CommandText = "insert into familia(nombre, apellido, parentesco, ocupacion) values('" + pFlia.nombre + "', '" + pFlia.apellido + "','" + pFlia.parentesco + "' ,'" + pFlia.ocupacion + "' )";
+
+                //"delete from familia where idfamilia = '" + pId + "'";
+            
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
+            
+            /*
+            hacer  todo para insertar en la bd
+            */
         }
     }
 

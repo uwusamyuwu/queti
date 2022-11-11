@@ -37,6 +37,9 @@ namespace A
             flia.parentesco = TxtParentesco.ToString();
             flia.ocupacion = TxtOcupacion.ToString();
             flia.agregarFamilia(flia);
+
+
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
