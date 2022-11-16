@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Modelo;
+using System.Security.Cryptography.X509Certificates;
 
 namespace A
 {
@@ -29,7 +30,7 @@ namespace A
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dgvFamilia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             
             dgvFamilia.DataSource = familia1.llenarFamilia();
         }
@@ -41,7 +42,8 @@ namespace A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AltaFamilia altaFamilia = new AltaFamilia();
+            AltaFamilia altaFamilia = new AltaFamilia("a");
+            altaFamilia.Text = "alta de familia";
             altaFamilia.ShowDialog();
 
             dgvFamilia.DataSource = familia1.llenarFamilia();
@@ -49,6 +51,10 @@ namespace A
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            AltaFamilia modificarFamilia = new AltaFamilia("m");
+            modificarFamilia.Text = "modificar familia";
+            
+            modificarFamilia.ShowDialog();  
 
         }
 

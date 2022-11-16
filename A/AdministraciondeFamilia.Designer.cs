@@ -69,7 +69,7 @@ namespace A
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(621, 173);
+            this.btnModificar.Location = new System.Drawing.Point(621, 182);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 4;
