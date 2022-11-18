@@ -15,18 +15,22 @@ namespace A
     {
         Familia flia = new Familia();
         string nombre = "";
-        public AltaFamilia(string pOrigen)
+        public AltaFamilia(string pOrigen, string pIdFamilia)
         {
             if (pOrigen == "m")
             {
-                nombre = "probando si funciona";
+                flia.obtenerFamilia(pIdFamilia);
+                
             }
             InitializeComponent();
         }
 
         private void AltaFamilia_Load(object sender, EventArgs e)
         {
-            TxtNombre.Text = nombre;
+            TxtNombre.Text = flia.nombre;
+            TxtApellido.Text = flia.apellido;
+            TxtParentesco.Text = flia.parentesco;
+            TxtOcupacion.Text = flia.ocupacion;
         }
 
         private void btCerrar_Click(object sender, EventArgs e)

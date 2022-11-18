@@ -71,6 +71,16 @@ namespace Modelo
             hacer  todo para insertar en la bd
             */
         }
+
+        public Familia obtenerFamilia(string pIdfamilia)
+        {
+            this.nombre = "pepe";
+            this.apellido = "toto";
+            this.idFamilia = Convert.ToInt32(pIdfamilia);
+            this.ocupacion = "titi";
+            this.parentesco = "me canse";
+            return this;
+        }
     }
 
 }
