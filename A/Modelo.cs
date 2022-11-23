@@ -74,13 +74,46 @@ namespace Modelo
 
         public Familia obtenerFamilia(string pIdfamilia)
         {
-            this.nombre = "pepe";
-            this.apellido = "toto";
-            this.idFamilia = Convert.ToInt32(pIdfamilia);
-            this.ocupacion = "titi";
-            this.parentesco = "me canse";
+            MySqlConnection conexion = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = conexion;
+
+            conexion.Open();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            instruccion.CommandText = "select * from familia where idfamilia =  '" + pIdfamilia + "'";
+            Adapter.SelectCommand = instruccion;
+            DataSet SetDatos = new DataSet();
+            Adapter.Fill(SetDatos);
+            DataTable Tabla = new DataTable();
+            Tabla = SetDatos.Tables[0];
+            conexion.Close();
+
+           
+
+            //MessageBox.Show(Tabla.Rows[0][4].ToString());
+            this.nombre = Tabla.Rows[0][1].ToString();
+            this.apellido = Tabla.Rows[0][2].ToString();
+            //this.idFamilia = Convert.ToInt32(pIdfamilia);
+            this.ocupacion = Tabla.Rows[0][4].ToString(); 
+            this.parentesco = Tabla.Rows[0][3].ToString();
             return this;
         }
+
+        public void actualizarFamilia(Familia pflia, string pIdfamilia)
+        {
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+
+            instruccion.CommandText = "update familia set nombre = '"+ pflia.nombre +"', apellido = '"+ pflia.apellido +"', parentesco = '"+pflia.parentesco +"', ocupacion = '"+ pflia.ocupacion +"' where idfamilia = '"+ idFamilia +"'";
+
+            //"delete from familia where idfamilia = '" + pId + "'";
+
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
+        }
+       
     }
 
 }

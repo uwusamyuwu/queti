@@ -56,8 +56,9 @@ namespace A
             AltaFamilia modificarFamilia = new AltaFamilia("m", idfamilia);
             modificarFamilia.Text = "modificar familia";
             
-            modificarFamilia.ShowDialog();  
+            modificarFamilia.ShowDialog();
 
+            //dgvFamilia.DataSource = familia1.llenarFamilia();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

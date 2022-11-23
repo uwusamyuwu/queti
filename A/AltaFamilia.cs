@@ -14,11 +14,14 @@ namespace A
     public partial class AltaFamilia : Form
     {
         Familia flia = new Familia();
-        string nombre = "";
+       // string nombre = "";
+
+        string origen = "";
         public AltaFamilia(string pOrigen, string pIdFamilia)
         {
             if (pOrigen == "m")
             {
+                origen = pIdFamilia;
                 flia.obtenerFamilia(pIdFamilia);
                 
             }
@@ -47,6 +50,14 @@ namespace A
             flia.ocupacion = TxtOcupacion.Text;
             flia.agregarFamilia(flia);
 
+            if (origen == "")
+            {
+                flia.agregarFamilia(flia);
+            }
+            else
+            {
+                flia.actualizarFamilia(flia, origen);
+            }
 
             this.Close();
         }
