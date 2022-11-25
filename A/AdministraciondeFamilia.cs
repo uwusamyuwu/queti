@@ -52,11 +52,12 @@ namespace A
         private void btnModificar_Click(object sender, EventArgs e)
         {
             string idfamilia = dgvFamilia[0, dgvFamilia.CurrentRow.Index].Value.ToString();
-
             AltaFamilia modificarFamilia = new AltaFamilia("m", idfamilia);
             modificarFamilia.Text = "modificar familia";
             
             modificarFamilia.ShowDialog();
+
+            dgvFamilia.DataSource = familia1.llenarFamilia();
 
             //dgvFamilia.DataSource = familia1.llenarFamilia();
         }

@@ -101,12 +101,14 @@ namespace Modelo
 
         public void actualizarFamilia(Familia pflia, string pIdfamilia)
         {
+
+            
             MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
             MySqlCommand instruccion = new MySqlCommand();
             instruccion.Connection = cnx;
             cnx.Open();
 
-            instruccion.CommandText = "update familia set nombre = '"+ pflia.nombre +"', apellido = '"+ pflia.apellido +"', parentesco = '"+pflia.parentesco +"', ocupacion = '"+ pflia.ocupacion +"' where idfamilia = '"+ idFamilia +"'";
+            instruccion.CommandText = "update familia set nombre = '"+ pflia.nombre +"', apellido = '"+ pflia.apellido +"', parentesco = '"+pflia.parentesco +"', ocupacion = '"+ pflia.ocupacion +"' where idfamilia = '"+ pIdfamilia + "'";
 
             //"delete from familia where idfamilia = '" + pId + "'";
 

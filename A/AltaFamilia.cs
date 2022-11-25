@@ -16,7 +16,7 @@ namespace A
         Familia flia = new Familia();
        // string nombre = "";
 
-        string origen = "";
+        public string origen = "";
         public AltaFamilia(string pOrigen, string pIdFamilia)
         {
             if (pOrigen == "m")
@@ -48,13 +48,12 @@ namespace A
             flia.apellido = TxtApellido.Text;
             flia.parentesco = TxtParentesco.Text;
             flia.ocupacion = TxtOcupacion.Text;
-            flia.agregarFamilia(flia);
+           // flia.agregarFamilia(flia);
 
             if (origen == "")
             {
                 flia.agregarFamilia(flia);
-            }
-            else
+            }else
             {
                 flia.actualizarFamilia(flia, origen);
             }
